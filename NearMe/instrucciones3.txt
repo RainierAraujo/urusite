@@ -1,0 +1,32 @@
+
+1. Include angular-route.js as a new <script> element inside the <head> of index.html.
+2.
+In app.js, inject ngRoute into the module's dependency array so that routing is available for the app to use.
+3.
+In app.js, define the app's routes:
+
+Use app.config() and $routeProvider to set up the routes.
+Map the URL / to the controller MainController and the template views/main.html.
+Otherwise, redirect to /
+4.
+Refactor the app to set up the controller MainController and the template views/main.html:
+
+Make a new file views/main.html.
+Cut the <div class="main"< section from index.html, and paste it into views/main.html.
+In index.html, replace the <div class="main"> with <div ng-view></div>.
+In views/main.html, remove the ng-controller="MainController" from <div class="main">.
+5.
+View the result by visiting http://localhost:8000 in the browser. The app should be working just it did before refactoring.
+6.
+In index.html in the header section under the <h1>, add a link to the About page, like this:
+
+<a class="pull-right" href="#/about">About</a>
+7.
+When a user clicks on the About link, she should be able to view a new page with more information about the app. Let's set this up next, following the same sequence of steps from above:
+
+In app.js, add another route. Map the URL /about to the controller AboutController and the template views/about.html.
+In js/controllers/AboutController.js, create a new controller named AboutController. Include it as a new <script> element.
+Create a template in views/about.html to display an About page. Here's what ours looks like. Write HTML in the template and CSS in css/main.css to create an About page for the app.
+Add a link to the About page that says "Start exploring". Set the href="#/" so it links back to the map.
+8.
+View the result in the browser. When you click on the About page, a view is constructed by injecting views/about.html into the <div ng-view></div> in index.html.

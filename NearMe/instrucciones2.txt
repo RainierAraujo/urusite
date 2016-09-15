@@ -1,0 +1,21 @@
+1.
+Rather than hardcode the map markers in the controller, let's write a service to fetch them from a real API:
+
+Wikipedia has added latitude/longtiude coordinates to several of their articles about places and landmarks. The Wikipedia Geodata API returns a JSON object containing an array of Wikipedia articles near a given point, in this case the latitude and longitude 40.741934, -74.004897.
+In js/services/places.js, create a new service named places.
+Use $http to get places data from https://en.wikipedia.org/w/api.php?action=query&list=geosearch&gsradius=5000&gscoord=40.741934%7C-74.004897&gslimit=30&format=json&callback=JSON_CALLBACK. Use $http.jsonp instead of $http.get.
+Include the service as a <script> element.
+2.
+In the controller, delete $scope.mapMarkers.
+3.
+In its place, use the places service to fetch marker data from the Wikipedia API:
+
+Create a new file js/vendor/helpers.js. Copy all the code from this JavaScript file and paste it into your js/vendor/helpers.js. Then include it as as a new <script>. We'll use the geodataToMarkers() function to format the Wikipedia API's output so that we can use it in the map.
+Add places into MainController as a dependency so that it's available to use.
+Then use places within the controller to asynchronously fetch the places data from the server, and store it into $scope.geodata.
+Use thegeodataToMarkers() function to format $scope.geodata, and store that output into $scope.mapMarkers, like this:
+$scope.mapMarkers = geodataToMarkers($scope.geodata);
+4.
+In the view, pass mapMarkers into the &lt;leaflet&gt; directive's markers attribute.
+5.
+View the result by visiting http://localhost:8000 in the browser. Wikipedia articles around the point 40.741934, -74.004897 now show up on the map. The geodataToMarkers() function added links inside each map marker's popup that go to the corresponding Wikipedia article.

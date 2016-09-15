@@ -1,0 +1,127 @@
+<!DOCTYPE html> 
+<html> 
+	<head>
+    	<meta charset="utf-8">
+		<title>Prof. Rainier Araujo</title> 
+		<meta name="viewport" content="width=device-width, initial-scale=1"> 
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
+		<link rel="stylesheet" href="../include/estilo.css" />
+		<link href="../images/uru_logo.png" rel="shortcut icon" />
+		<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+		
+		<script type="text/javascript">
+			function proce()
+			{	
+				var a=screen.availWidth*0.012;
+				var b=screen.availHeight*0.20;
+				document.getElementById("asignaturas").style.fontSize=a+"px";
+				document.getElementById("asignaturas").style.height=b+"px";				
+			}
+		</script>
+	</head> 
+	<body onLoad="javascript:proce()">
+ 		<div align="left" data-role="header" data-theme="b">
+			<img src="../images/uru_logo.png" style="width:55px;height:30px;margin-left:5%;margin-top:0.5%"/>
+			<p style="margin-left:2%;margin-top:-0.4%"><b>Universidad Rafael Urdaneta</b></p>
+       		</div>
+       		<div align="center" id="MARCO" style="width:700px;z-index:2;top:20%; left:30%;  display:none; position:absolute;background-color:#FBFBFB;border-radius:8px; align:center">
+		
+		<div data-role="header" data-theme="b" align=center><h1 style=""> Modelos de Licencia </h1></div>
+		<br>
+		
+		
+		
+				<a href="https://www.debian.org/releases/sarge/arm/apes02.html.es" data-role="button" class="boton" onclick="document.getElementById('MARCO').style.display='none';" data-ajax="false" style="height:40px;width:135px;display:inline-block">GNU GPL 2</a>
+			
+				<a href="http://www.spanish-translator-services.com/espanol/t/gnu/gpl-ar.html" data-role="button" class="boton" onclick="document.getElementById('MARCO').style.display='none';" data-ajax="false" style="height:40px;width:135px;display:inline-block">GNU GPL 3</a>
+			
+				<a href="https://www.moo.com/es/about/fonts/licences/mit-licence.html" data-role="button" class="boton" onclick="document.getElementById('MARCO').style.display='none';" data-ajax="false" style="height:40px;width:135px;display:inline-block">MIT</a>
+			<br>
+				<a href="https://www.moo.com/es/about/fonts/licences/apache-licence.html " data-role="button" class="boton" onclick="document.getElementById('MARCO').style.display='none';" data-ajax="false" style="height:40px;width:135px;display:inline-block">Apache 2.0</a>
+		
+			<a href="https://www.veeam.com/es-lat/eula.html" data-role="button" colspan="2" class="boton" onclick="document.getElementById('MARCO').style.display='none';" data-ajax="false" style="height:40px;width:135px;display:inline-block">EULA</a>
+			
+			<br>
+			
+		<a href="#" data-role="button" class="boton" onclick="document.getElementById('MARCO').style.display='none';" style="height:40px;width:135px;">Atras</a>
+		</div>
+	
+	</div>
+       		
+       		<div align="center" id="PROGI" style="width:700px;height:350px;z-index:2;top:20%; left:30%;  display:none; position:absolute;background-color:#FBFBFB;border-radius:8px; align:center">
+		
+		<div data-role="header" data-theme="b" align=center><h1 style=""> Programacion I Teoria </h1></div>
+		<br>
+		<br>
+		
+		<table align=center style="border: 0px solid black;">
+			<tr>
+			<td>
+				<a href="../archivo/Guia de Ejercicios I Teoria.pdf" data-role="button" class="boton" onclick="document.getElementById('PROGI').style.display='none';" data-ajax="false" style="height:40px;width:135px;">Guia 1</a>
+			</td>
+			<td>
+				<a href="../archivo/Guia de Ejercicios II Teoria.pdf" data-role="button" class="boton" onclick="document.getElementById('PROGI').style.display='none';" data-ajax="false" style="height:40px;width:135px;">Guia 2</a>
+			</td>
+			<td>
+				<a href="../archivo/Guia de Ejercicios III.pdf" data-role="button" class="boton" onclick="document.getElementById('PROGI').style.display='none';" data-ajax="false" style="height:40px;width:135px;">Guia 3</a>
+			</td>
+		</tr>
+			</table>
+			<br>
+			<br>
+		<a href="#" data-role="button" class="boton" onclick="document.getElementById('PROGI').style.display='none';" style="height:40px;width:135px;">Atras</a>
+		</div>
+	
+	</div>
+       		<div align="center" id="LABPROGI" style="width:700px;height:350px;z-index:2;top:20%; left:30%;  display:none; position:absolute;background-color:#FBFBFB;border-radius:8px; align:center">
+		
+		<div data-role="header" data-theme="b" align=center><h1 style=""> Programacion I Laboratorio </h1></div>
+		<br>
+		<br>
+		
+		<table align=center border=0>
+			<tr>
+			<td>
+				<a href="../archivo/Guia de Ejercicios I Laboratorio.pdf" data-role="button" class="boton" onclick="document.getElementById('PROGI').style.display='none';" data-ajax="false" style="height:40px;width:135px;">Guia 1</a>
+			</td>
+			<td>
+				<a href="../archivo/Guia de Ejercicios II Laboratorio.pdf" data-role="button" class="boton" onclick="document.getElementById('PROGI').style.display='none';" data-ajax="false" style="height:40px;width:135px;">Guia 2</a>
+			</td>
+			<td>
+				<a href="../archivo/Guia de Ejercicios III Laboratorio.pdf" data-role="button" class="boton" onclick="document.getElementById('PROGI').style.display='none';" data-ajax="false" style="height:40px;width:135px;">Guia 3</a>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<a href="../archivo/Guia de Ejercicios IV Laboratorio.pdf" data-role="button" class="boton" onclick="document.getElementById('PROGI').style.display='none';" data-ajax="false" style="height:40px;width:135px;">Guia 4</a>
+			</td>
+			<td>
+				<a href="../archivo/Guia de Ejercicios V Laboratorio.pdf" data-role="button" class="boton" onclick="document.getElementById('PROGI').style.display='none';" data-ajax="false" style="height:40px;width:135px;">Guia 5</a>
+			</td>
+			<td>
+				<a href="../archivo/Guia de Ejercicios VI Laboratorio.pdf" data-role="button" class="boton" onclick="document.getElementById('PROGI').style.display='none';" data-ajax="false" style="height:40px;width:135px;">Guia 6</a>
+			</td>
+			</tr>
+			<tr>
+			<td>
+				<a href="../archivo/Guia de Ejercicios VII Laboratorio.pdf" data-role="button" class="boton" onclick="document.getElementById('PROGI').style.display='none';" data-ajax="false" style="height:40px;width:135px;">Guia 7</a>
+			</td>
+		</tr>
+			</table>
+			<br>
+			<br>
+		<a href="#" data-role="button" class="boton" onclick="document.getElementById('LABPROGI').style.display='none';" style="height:40px;width:135px;">Atras</a>
+		</div>
+		<br>
+		<p style="margin-left:5%"><b></b></p>
+		<div data-role="controlgroup" id="asignaturas" align="center" data-type="horizontal" style="margin-top:2%; margin-left:7%;">
+			<a href="#" onclick="document.getElementById('PROGI').style.display='inherit';"  id="ficha" rel="external" data-role="button" class="boton" style="border-top-left-radius:10px; border-bottom-left-radius:10px;position:static; left:500px;background-image:url(../images/programacion.png);"data-inline="true">Programacion I</a>
+			<a href="#" onclick="document.getElementById('LABPROGI').style.display='inherit';" rel="external" id="turno" data-role="button" class="boton" style="border-top-right-radius:10px; border-bottom-right-radius:10px; position:static; background-image:url(../images/labprogramacion.png);" data-inline="true">Labotaratorio de Programacion I</a>
+			<a href="../archivo/Auditoria Material.rar" rel="external" id="turno" data-role="button" class="boton" style="border-top-right-radius:10px; border-bottom-right-radius:10px; position:static; background-image:url(../images/auditoria.png);"data-inline="true">Auditoria de Sistemas</a>
+		</div>
+		<div data-role="controlgroup" id="asignaturas" align="center" data-type="horizontal" style="margin-top:2%; margin-left:7%;">
+			<a href="#" onclick="document.getElementById('MARCO').style.display='inherit';"  id="ok" rel="external" data-role="button" class="boton" style="border-top-left-radius:10px; border-bottom-left-radius:10px;position:static; left:500px;background-image:url(../images/marco.png);height:200px"data-inline="true">Marco Legal - Licencias</a>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html> 
+<html> 
+	<head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    	
+		<title>Prof. Rainier Araujo</title> 
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1"> 
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
+		<link rel="stylesheet" href="../include/estilo.css" />
+		<link href="../images/uru_logo.png" rel="shortcut icon" />
+		<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(e) 
+			{	
+				query=window.location.search.substring(1);
+				q=query.split("&");
+				vars=[];
+				for(i=0;i<q.length;i++)
+				{
+				    x=q[i].split("=");
+				    k=x[0];
+				    v=x[1];
+				    vars[k]=v;
+				}
+	                	$("#notas").load("../procesar/listar_notas.php", 
+				{
+					materia: vars['materia'],
+					seccion: vars['seccion'],
+					periodo: '2015B'
+				});
+           		});
+			
+		</script>
+	</head> 
+	<body>
+		<script type="text/javascript">
+			
+ 		</script>
+ 		
+ 		<div align="left" data-role="header" data-theme="b">
+			<img src="../images/uru_logo.png" style="width:55px;height:30px;margin-left:5%;margin-top:0.5%"/>
+			<p style="margin-left:2%;margin-top:-0.4%"><b>Universidad Rafael Urdaneta</b></p>
+       		</div>
+	
+		<br>
+		<p style="margin-left:5%"><b>Calificaciones</b></p>
+		<div data-role="controlgroup" id="notas" align="center" data-type="horizontal" style="margin-top:0%;font-size:0.8vw;width:80%;margin-right:auto;margin-left:auto;">
+			
+		</div>
+	    <br>
+	</body>
+</html>

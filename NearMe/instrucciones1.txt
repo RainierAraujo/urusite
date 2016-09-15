@@ -1,0 +1,14 @@
+1.
+Include the AngularJS library in your project. We've downloaded the AngularJS library to js/vendor/angular.min.js. Include this file as a new <script> element inside the <head> of index.html.
+2.
+In js/app.js, create a new module named NearMeApp. Include it as a new <script> element, and then attach it to the <body> element.
+3.
+In js/controllers/MainController.js, create a new controller named MainController. Include it as a new <script> element, and then attach it to the <div class="main"> element.
+4.
+So far, you've been writing your own custom directives. Developers in the AngularJS community have been creating and sharing their own directives for others to use. A popular directive is the leaflet directive, which allows you to embed a map in your AngularJS app. Let's use it here in the NearMe app:
+
+Create a new file js/vendor/leaflet.js. Copy all the code from the Leaflet JavaScript file and paste it into your js/vendor/leaflet.js. Then include js/vendor/leaflet.js as a new <script>.
+Create a new file js/vendor/angular-leaflet-directive.min.js. Copy all the code from the Leaflet directive and paste it into your js/vendor/angular-leaflet-directive.min.js. Then include js/vendor/angular-leaflet-directive.min.js as a new <script>.
+Create a new file css/leaflet.css. Copy all the code from the Leaflet CSS file and paste it into your css/leaflet.css. Then include css/leaflet.css as a new <link> element inside the <head> of index.html.
+In the module, inject leaflet-directive into the dependency array so that the leaflet directive is available for the app to use.
+In the view, use the <leaflet> directive to display a map.

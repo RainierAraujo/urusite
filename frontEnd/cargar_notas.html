@@ -1,0 +1,111 @@
+<!DOCTYPE html> 
+<html> 
+	<head><meta http-equiv="Content-Type" content="text/html; charset=euc-jp">
+		
+		<title>Prof. Rainier Araujo</title> 		
+		<meta name="viewport" content="width=device-width, initial-scale=1"> 
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
+		<link rel="stylesheet" href="../include/estilo.css" />
+		<link href="../images/uru_logo.png" rel="shortcut icon" />
+		<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+		<script type="text/javascript">
+			function leer_datos()
+			{
+				query=window.location.search.substring(1);
+				q=query.split("&");
+				vars=[];
+				for(i=0;i<q.length;i++)
+				{
+				    x=q[i].split("=");
+				    k=x[0];
+				    v=x[1];
+				    vars[k]=v;
+				}
+			}
+			
+			
+			function cargar()
+			{
+				//pendiente
+			}
+			
+			
+			function cargar_materias()
+			{
+				var xhr1 = new XMLHttpRequest();
+				xhr1.onreadystatechange = function ()
+				{
+					if (xhr1.readyState==4 && xhr1.status==200)
+					{
+						notas.innerHTML = xhr1.responseText;
+						
+					}
+				}
+				xhr1.open('POST','../procesar/cargar_notas.php');
+				xhr1.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+				xhr1.send('materia='+vars["materia"]+'&seccion='+vars["seccion"]+'&periodo=2014B');
+			}
+
+        		function login(x,y)
+			{   
+				var xhr= new XMLHttpRequest();
+	
+				xhr.onreadystatechange = function()
+				{
+					if (xhr.readyState==4 && xhr.status==200)
+					{
+						var w = xhr.responseText;
+						
+						if(w == 1)
+						{
+							sesion.style.display="none";
+							cargar_materias();							
+						}
+						else
+						{
+							alert("datos incorrectos");
+							location.href="www.google.com"
+						}
+					}
+
+				}
+				xhr.open('POST','../procesar/iniciar_sesion.php',true);
+				xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+				xhr.send('x='+x+"&y="+y);
+			}
+		</script>
+	</head> 
+	<body onload="leer_datos()">
+	<input type="hidden" id="baton">
+		<div id="sesion" style="width:500px;height:250px;z-index:2;top:20%; left:30%;  display:inherit; position:absolute;background-color:#FBFBFB;border-radius:8px; align:center" ><table class="centrar">
+                    	<tr>
+                        	<td>Cedula : </td>
+                            <td><input type="text" id="ci"></td>
+                        </tr>
+                        <tr>
+                        	<td>Contraseña : </td>
+                            <td><input type="password" id="clave"></td>
+                        </tr>
+                        <tr>
+                        	<td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                        	<td colspan="2"><input type="button" id="boton1" value="Entrar" onclick="login(document.getElementById('ci').value,document.getElementById('clave').value)"></td>
+                        </tr>
+                    </table></div>
+		
+ 		
+ 		<div align="left" data-role="header" data-theme="b">
+			<img src="../images/uru_logo.png" style="width:55px;height:30px;margin-left:5%;margin-top:0.5%"/>
+			<p style="margin-left:2%;margin-top:-0.4%"><b>Universidad Rafael Urdaneta</b></p>
+       		</div>
+	
+		<br>
+		<p style="margin-left:5%"><b>Calificaciones</b></p>
+		<div data-role="controlgroup" id="notas" align="center" data-type="horizontal" style="margin-top:0%;font-size:0.8vw;width:80%;margin-right:auto;margin-left:auto;">
+			
+		</div>
+	    <br>
+	</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html> 
+<html> 
+	<head>
+    	<meta charset="utf-8">
+		<title>Prof. Rainier Araujo</title> 
+		<meta name="viewport" content="width=device-width, initial-scale=1"> 
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
+		<link rel="stylesheet" href="include/estilo.css" />
+		<link href="images/uru_logo.png" rel="shortcut icon" />
+		<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+		
+		<script type="text/javascript">
+			function proce()
+			{	
+				var a=screen.availWidth*0.012;
+				var b=screen.availHeight*0.20;
+				document.getElementById("asignaturas").style.fontSize=a+"px";
+				document.getElementById("asignaturas").style.height=b+"px";
+				document.getElementById("estudiante").style.height=b+"px";
+				document.getElementById("estudiante").style.fontSize=a+"px";
+				document.getElementById("herramientas").style.height=b+"px";
+				document.getElementById("herramientas").style.fontSize=a+"px";
+				
+			}
+		</script>
+	</head> 
+	<body onLoad="javascript:proce()">
+ 		<div align="left" data-role="header" data-theme="b">
+			<img src="images/uru_logo.png" style="width:55px;height:30px;margin-left:5%;margin-top:0.5%"/>
+			<p style="margin-left:2%;margin-top:-0.4%"><b>Universidad Rafael Urdaneta</b></p>
+        	
+        </div>
+	
+		<br>
+		<p style="margin-left:5%"><b>Material de Asignaturas</b></p>
+		<div data-role="controlgroup" id="asignaturas" align="center" data-type="horizontal" style="margin-top:0%; margin-left:7%;">
+			<a href="page/planificacion_materias.html" id=ficha; rel="external"  data-ajax="false" data-role="button" class="boton" style="border-top-left-radius:10px; 
+			border-bottom-left-radius:10px;position:static; left:500px;background-image:url(images/contenido.png);"data-inline="true">Planificacion</a>
+			<a href="http://www.mediafire.com/download/3ia39pv04k530iy/Servicio_Comunitario.rar"  data-ajax="false" data-role="button" class="boton" style=" position:static; background-image:url(images/servicio_comunitario.png);"data-inline="true">Servicio Comunitario</a>
+			<a href="page/guias_materias.html" rel="external" id="turno"  data-ajax="false" data-role="button" class="boton" style="border-top-right-radius:10px; border-bottom-right-radius:10px; position:static; background-image:url(images/guia.png);"data-inline="true">Guias</a>
+		</div>
+	    <br>
+    	<p style="margin-left:5%"><b>Material del estudiante</b></p>
+    	<div data-role="controlgroup" id="estudiante" align="center"   data-type="horizontal" style="margin-top:0%; margin-left:7%;">
+			<a href="page/notas_materias.html"  data-ajax="false" data-role="button" class="boton" style=" position:static; background-image:url(images/tabla_de_notas.png);"data-inline="true">Calificaciones</a>
+			<a href="Calendario/index_alumno.html"  data-ajax="false" data-role="button" class="boton" style=" position:static; background-image:url(images/calendario_icono.png);"data-inline="true">Calendario de Actividades</a>
+			<a href="http://noticias-uru-araujo.blogspot.com/" target="_blank" data-ajax="false" data-role="button" class="boton" style=" position:static; background-image:url(images/noticias.png);"data-inline="true">Noticias</a>
+			<br>
+		</div>
+		<p style="margin-left:5%"><b>Herramientas</b></p>
+<div data-role="controlgroup" id="herramientas" align="center" data-type="horizontal" style="margin-top:0%; margin-left:7%;">
+			<a href="http://www.mediafire.com/download/ba22daamwyhpowd/BorlandC%2B%2B.rar"   data-ajax="false" data-role="button" class="boton" style=" position:static; background-image:url(images/image_thumb7.png);"data-inline="true">Descargar Borland C++</a>
+			<a href="page/descargas_dev.html"  data-ajax="false" data-role="button" class="boton" style=" position:static; background-image:url(images/images.jpg);"data-inline="true">Descargar Dev C++</a>
+			<a href="http://sourceforge.net/projects/zinjai/files/ZinjaI-Mac/zinjai-20100923/zinjai-m32-20100923.dmg/download?use_mirror=hivelocity&r=http%3A%2F%2Fespanol.answers.yahoo.com%2Fquestion%2Findex%3Fqid%3D20110331123904AAMxEJz&use_mirror=hivelocity"  data-role="button" class="boton" style=" position:static; background-image:url(images/ZinjaI.png);background-size:40%;"data-inline="true">Descargar ZinjaI</a>
+			<br>
+		</div>
+	</body>
+</html>

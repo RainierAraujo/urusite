@@ -1,0 +1,144 @@
+<!DOCTYPE html> 
+<html> 
+	<head>
+    	<meta charset="utf-8">
+		<title>Prof. Rainier Araujo</title> 
+		<meta name="viewport" content="width=device-width, initial-scale=1"> 
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
+		<link rel="stylesheet" href="../include/estilo.css" />
+		<link href="../images/uru_logo.png" rel="shortcut icon" />
+		<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+		
+		
+		
+		<script type="text/javascript">
+			
+			function proce()
+			{	
+				var a=screen.availWidth*0.010;
+				var b=screen.availHeight*0.18;
+				document.getElementById("asignaturas1").style.fontSize=a+"px";
+				document.getElementById("asignaturas1").style.height=b+"px";
+				document.getElementById("asignaturas2").style.fontSize=a+"px";
+				document.getElementById("asignaturas2").style.height=b+"px";			
+			}
+		</script>
+	</head> 
+	<body onLoad="javascript:proce()">
+ 		<div align="left" data-role="header" data-theme="b">
+			<img src="../images/uru_logo.png" style="width:55px;height:30px;margin-left:5%;margin-top:0.5%"/>
+			<p style="margin-left:2%;margin-top:-0.4%"><b>Universidad Rafael Urdaneta</b></p>
+	       	</div>
+	       	
+        
+           
+       <div style="width:100%;color:red;font-weight:bold;text-align:center"><p>NOTAS DEFINITIVAS CARGADAS, RECLAMOS, CORRECCIONES O ACLARATORIAS ENVIAR A URU.ARAUJO@GMAIL.COM</p> <p>FECHA MAXIMA PARA EL AJUSTE DE NOTAS 03/08/2016</p></div>
+		<div align="center" id="PROGI" style="width:700px;height:350px;z-index:2;top:20%; left:30%;  display:none; position:absolute;background-color:#FBFBFB;border-radius:8px; align:center">
+		
+			<div data-role="header" data-theme="b" align=center>
+				<h1 style=""> 
+					Selecciona tu Seccion 
+				</h1>
+			</div>
+			<br>
+			<br>
+		
+			<table align="center" border="0">
+				<tr>
+					<td>
+						<a href="../images/notas TA.png" data-role="button" class="boton" onclick="document.getElementById('PROGI').style.display='none';" data-ajax="false" style="height:40px;width:135px;">
+							Seccion A
+						</a>
+					</td>
+					<td>
+						<a href="../images/notas TB.png" data-role="button" class="boton" onclick="document.getElementById('PROGI').style.display='none';" data-ajax="false" style="height:40px;width:135px;">
+							Seccion B
+						</a>
+					
+				</tr>
+			</table>
+			<br>
+			<br>
+			<a href="#" data-role="button" class="boton" onclick="document.getElementById('PROGI').style.display='none';" style="height:40px;width:135px;">Atras</a>
+		</div>
+		
+		
+		<div align="center" id="TEC" style="width:700px;height:350px;z-index:3;top:160px; left:450px;  display:none; position:absolute;background-color:#FBFBFB;border-radius:8px; align:center">
+		
+			<div data-role="header" data-theme="b" align=center>
+				<h1 style=""> 
+					Selecciona tu Seccion 
+				</h1>
+			</div>
+			<br>
+			<br>
+			<table align="center" border="0">
+				<tr>
+					<td>
+						<a href="../archivo/TECNOLOGIA A.pdf" data-ajax="false" data-role="button" class="boton"  style="height:40px;width:135px;">Seccion A</a>
+				
+					
+					</td>
+					<td>
+						<a href="../archivo/TECNOLOGIA B.pdf" data-ajax="false" data-role="button" class="boton"  style="height:40px;width:135px;">Seccion B</a>
+				
+					
+					</td>
+				</tr>
+			</table>
+
+			<a href="#" data-role="button" class="boton" onclick="document.getElementById('TEC').style.display='none';" style="height:40px;width:135px;">Atras</a>
+		</div>
+		
+		
+		<div align="center" id="LABPROGI" style="width:700px;height:350px;z-index:3;top:160px; left:450px;  display:none; position:absolute;background-color:#FBFBFB;border-radius:8px; align:center">
+		
+			<div data-role="header" data-theme="b" align=center><h1 style=""> Selecciona tu Seccion </h1></div>
+			<br>
+			<br>
+			<table align=center border=0>
+				<tr>
+				<td>
+						<a href="../images/notas LC.png" data-ajax="false" data-role="button" class="boton"  style="height:40px;width:135px;">Seccion C</a>
+					</td>
+					<td>
+						<a href="../images/notas LD.png" data-ajax="false" data-role="button" class="boton"  style="height:40px;width:135px;">
+							Seccion D
+						</a>
+					</td>	
+					
+					<td>
+						<a href="../images/notas LF.png" data-ajax="false" data-role="button" class="boton"  style="height:40px;width:135px;">Seccion F</a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="../images/notas LG.png" data-ajax="false" data-role="button" class="boton"  style="height:40px;width:135px;">Seccion G</a>
+					</td>
+					
+				</tr>
+
+			</table>
+			<br>
+			
+			<a href="#" data-role="button" class="boton" onclick="document.getElementById('LABPROGI').style.display='none';" style="height:40px;width:135px;">Atras</a>
+		</div>
+		
+		<br>
+		<p style="margin-left:5%"><b>Selecciona una materia</b></p>
+		<div data-role="controlgroup" id="asignaturas1" align="center" data-type="horizontal" style="margin-top:2%; margin-left:7%;">
+			<a href="#" onclick="document.getElementById('PROGI').style.display='inherit';" id="programacion" rel="external" data-role="button" class="boton" style="border-top-left-radius:10px; border-bottom-left-radius:10px;position:static; left:500px;background-image:url(../images/programacion.png);"data-inline="true">Programacion I</a>
+			<a href="#" rel="external" onclick="document.getElementById('LABPROGI').style.display='inherit';" id="turno" data-role="button" class="boton" style="position:static; background-image:url(../images/labprogramacion.png);"data-inline="true">Lab. de Programacion I</a>
+			<a href="../archivo/Inteligencia Artificial.pdf" id=ficha rel="external" data-role="button" class="boton" style="border-top-left-radius:10px; border-bottom-left-radius:10px;position:static; left:500px;background-image:url(../images/ia.png);"data-inline="true">Inteligencia Artificial</a>
+			</div>
+    	<div data-role="controlgroup" id="asignaturas2" align="center" data-type="horizontal" style="margin-top:2%; margin-left:7%;">
+			<a href="../images/redes T.png" rel="external" id="turno" data-role="button" class="boton" style="border-top-right-radius:10px; border-bottom-right-radius:10px; position:static; background-image:url(../images/redes2.png);"data-inline="true">Redes II</a>
+			<a href="../images/redes L.png" id=ficha; rel="external" data-role="button" class="boton" style="position:static; left:500px;background-image:url(../images/labredes2.png);"data-inline="true">Labotarorio de Redes II</a>
+			<a href="#"  onclick="document.getElementById('TEC').style.display='inherit';" rel="external" id="turno" data-role="button" class="boton" style="border-top-right-radius:10px; border-bottom-right-radius:10px; position:static; background-image:url(../images/internetworld.png);"data-inline="true">Tecnologia de Negocios</a>
+			<a href="../archivo/Marco Legal.pdf" rel="external" id="turno" data-role="button" class="boton" style="border-top-right-radius:10px; border-bottom-right-radius:10px; position:static; background-image:url(../images/marco.png);"data-inline="true">Marco legal</a>
+			<br>
+		</div>
+		
+	</body>
+</html>

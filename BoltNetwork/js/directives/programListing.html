@@ -1,0 +1,22 @@
+<div class="row" ng-repeat="episode in listing" style="margin-top:20px">
+            
+          
+            
+         
+            
+            <div class="col-md-6">
+              <h2 class="episode">{{episode.episode}}</h2>
+              <p class="description">{{episode.description}}</p>
+            </div>
+
+            <div class="col-md-3">
+              <ul class="list-group">
+                <li class="list-group-item"><span>Date: {{episode.datetime | date:'mediumDate'}}</span>  </li>
+                <li class="list-group-item"><span>On air:{{episode.datetime | date:'EEEE'}}</span>  </li>
+                <li class="list-group-item"><span>Time:{{episode.datetime | date:'shortTime'}}</span>  </li>
+                <li class="list-group-item"><span>Season:{{episode.season}}</span>  </li>
+                <li class="list-group-item"><span>Genre:{{episode.genre}}</span>  </li>
+              </ul>
+            </div>
+            
+          </div>

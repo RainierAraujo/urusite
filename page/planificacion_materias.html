@@ -1,0 +1,65 @@
+<!DOCTYPE html> 
+<html> 
+	<head>
+    	<meta charset="utf-8">
+		<title>Prof. Rainier Araujo</title> 
+		<meta name="viewport" content="width=device-width, initial-scale=1"> 
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
+		<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+		<style type="text/css">
+			  html, body 
+			  {
+        	    height: 100%;
+				width:100%;
+	       	  }
+		
+	 		 .boton
+			 {
+			 	width:25%; 
+	  			height: 100%;
+	  			border-top:0; 
+				border-left:0; 
+				botder-left-width:0px; 	 
+				position:static;
+				background-repeat:no-repeat; 
+				background-position:center;
+				background-size:30%;
+			}
+		</style>
+		<script type="text/javascript">
+			function proce()
+			{	
+				var a=screen.availWidth*0.1;
+				var b=screen.availHeight*0.20;
+				var c=screen.availWidth*0.9;
+				var d=screen.availWidth;
+				document.getElementById("consulta").style.height=b+"px";
+				document.getElementById("sistema").style.height=b+"px";
+				document.getElementById("consulta").style.Width=a+"px";
+				document.getElementById("sistema").style.Width=a+"px";
+			}
+		</script>
+	</head> 
+	<body onLoad="javascript:proce()">
+ 		<div data-role="header" data-theme="b">
+			<img src="../images/urulogo.jpg" style="width:130px;height:40px;margin-left:3%;">
+			<p style="margin-left:2%;margin-top:-0.5%"><b>Universidad Rafael Urdaneta</b></p>
+        	
+        </div>
+	
+		<br>
+		<p style="margin-left:5%"><b>Selecciona una materia</b></p>
+		<div data-role="controlgroup" id="consulta" align="center" data-type="horizontal" style="margin-top:2%; margin-left:7%;">
+			<a href="../archivos/FORMATO PLAN SEMANAL DE CLASES PROGRAMACION I.pdf" id=ficha; rel="external" data-role="button" class="boton" style="border-top-left-radius:10px; border-bottom-left-radius:10px;position:static; left:500px;background-image:url(../images/programacion.png);"data-inline="true">Programacion I</a>
+			<a href="../archivo/FORMATO PLAN SEMANAL DE CLASES LABORATORIO DE PROGRAMACION I.pdf" rel="external" id="turno" data-role="button" class="boton" style="border-top-right-radius:10px; border-bottom-right-radius:10px; position:static; background-image:url(../images/labprogramacion.png);"data-inline="true">Labotaratorio de Programacion I</a>
+			<a href="../archivo/FORMATO PLAN SEMANAL DE CLASES INTELIGENCIA ARTIFICIAL.pdf" id=ficha; rel="external" data-role="button" class="boton" style="border-top-left-radius:10px; border-bottom-left-radius:10px;position:static; left:500px;background-image:url(../images/ia.png);"data-inline="true">Inteligencia Artificial</a>
+			</div>
+    	<div data-role="controlgroup" id="sistema" align="center" data-type="horizontal" style="margin-top:2%; margin-left:7%;">
+			<a href="../archivo/FORMATO PLAN SEMANAL DE CLASES REDES II.pdf" rel="external" id="turno" data-role="button" class="boton" style="border-top-right-radius:10px; border-bottom-right-radius:10px; position:static; background-image:url(../images/redes2.png);"data-inline="true">Redes de Comunicaciones II</a>
+			<a href="../archivo/FORMATO PLAN SEMANAL DE CLASES LABORATORIO DE REDES II.pdf" id=ficha; rel="external" data-role="button" class="boton" style="border-top-left-radius:10px; border-bottom-left-radius:10px;position:static; left:500px;background-image:url(../images/labredes2.png);"data-inline="true">Labotarorio de Redes de Comunicaciones II</a>
+			<a href="../archivo/FORMATO PLAN SEMANAL DE CLASES AUDITORIA DE SISTEMAS.pdf" rel="external" id="turno" data-role="button" class="boton" style="border-top-right-radius:10px; border-bottom-right-radius:10px; position:static; background-image:url(../images/auditoria.png);"data-inline="true">Auditoria de Sistemas</a>
+			<br>
+		</div>
+	</body>
+</html>

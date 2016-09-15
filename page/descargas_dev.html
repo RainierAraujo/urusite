@@ -1,0 +1,67 @@
+<!DOCTYPE html> 
+<html> 
+	<head>
+    	<meta charset="utf-8">
+		<title>Prof. Rainier Araujo</title> 
+		<meta name="viewport" content="width=device-width, initial-scale=1"> 
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
+		<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+		<style type="text/css">
+			  html, body 
+			  {
+        	                height: 100%;
+				width:100%;
+	       	          }
+		
+	 		 .boton
+			 {
+			 	width:25%; 
+	  			height: 100%;
+	  			border-top:0; 
+				border-left:0; 
+				botder-left-width:0px; 	 
+				position:static;
+				background-repeat:no-repeat; 
+				background-position:center;
+				background-size:30%;
+			}
+		</style>
+		<script type="text/javascript">
+			function proce()
+			{	
+				var a=screen.availWidth*0.1;
+				var b=screen.availHeight*0.20;
+				var c=screen.availWidth*0.9;
+				var d=screen.availWidth;
+				document.getElementById("asignaturas").style.height=b+"px";
+				document.getElementById("asignaturas").style.Width=a+"px";		
+				
+			}
+		</script>
+	</head> 
+	<body onLoad="javascript:proce()">
+ 		<div data-role="header" data-theme="b">
+			<img src="images/uru_logo.png" style="width:70px;height:25px;margin-left:5%;margin-top:0.3%">
+			<p style="margin-left:2%;margin-top:-0.5%"><b>Universidad Rafael Urdaneta</b></p>
+        	<div>
+            <a href="page/m.html" rel="external" id="home" data-role="button" data-icon="home" data-iconpos="notext" style="Position:Absolute; top:35%; margin-left:95% "></a>
+			<a href="page/menu_inicio.html" rel="external" id="back" data-role="button" data-icon="back" data-iconpos="notext" style="Position:Absolute; top:35%; margin-left:97%  "></a>
+			<a href="page/procesar/cerrar_sesion.php" rel="external" id="hlogout" data-role="button" data-icon="delete" data-iconpos="notext" style="Position:Absolute; top:35%; margin-left:93% "></a>
+            </div>
+        </div>
+	
+		<br>
+		<p style="margin-left:5%"><b>Escoje tu sistema</b></p>
+		<div data-role="controlgroup" id="asignaturas" align="center" data-type="horizontal" style="margin-top:0%; margin-left:7%;">
+			<a href="http://sourceforge.net/projects/orwelldevcpp/files/Setup%20Releases/Dev-Cpp%205.11%20TDM-GCC%204.9.2%20Setup.exe/download" id=ficha; rel="external" data-role="button" class="boton" style="border-top-left-radius:10px; 
+			border-bottom-left-radius:10px;position:static; left:500px;background-image:url(../images/logo_windows_7.png);background-size: 40%;"data-inline="true">Dev C++ para Windows 7</a>
+			<a href="
+http://sourceforge.net/projects/orwelldevcpp/files/Setup%20Releases/Dev-Cpp%205.11%20TDM-GCC%204.9.2%20Setup.exe/download"  data-role="button" class="boton" style=" position:static; background-image:url(../images/logo_windows_8.png);background-size: 50%;"data-inline="true">Dev C++ para Windows 8</a>
+	
+		</div>
+	    <br>
+    	
+		</div>
+	</body>
+</html>
